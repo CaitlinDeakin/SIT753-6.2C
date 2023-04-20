@@ -15,6 +15,18 @@ pipeline{
             steps{
                 echo "complete"
             }
+            post{
+    	        success{
+        		    mail to: "caitlinparker98@gmail.com",
+        	        subject: "Unit and Integration Tests Status",
+        		    body: "Tests completed successfully."
+    	        }
+                failure{
+                    mail to: "caitlinparker98@gmail.com",
+        	        subject: "Unit and Integration Tests Status",
+        		    body: "Unit and integration tests have failed."
+                }
+    		}
         }
         stage('Code Analysis'){
             steps{
@@ -25,6 +37,18 @@ pipeline{
             steps{
                 echo "complete"
             }
+            post{
+    	        success{
+        		    mail to: "caitlinparker98@gmail.com",
+        	        subject: "Security Scan",
+        		    body: "Security scan completed successfully."
+    	        }
+                failure{
+                    mail to: "caitlinparker98@gmail.com",
+        	        subject: "Security Scan",
+        		    body: "The security scan has failed."
+                }
+    		}
         }
         stage('Deploy to Staging'){
             steps{
