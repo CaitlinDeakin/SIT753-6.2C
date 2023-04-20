@@ -8,37 +8,37 @@ pipeline{
     stages{
         stage('Build'){
             steps{
-                
+                echo complete
             }
         }
         stage('Unit and Integration Tests'){
             steps{
-                
+                echo complete
             }
         }
         stage('Code Analysis'){
             steps{
-                
+                echo complete
             }
         }
         stage('Security Scan'){
             steps{
-                
+                echo complete
             }
         }
         stage('Deploy to Staging'){
             steps{
-                
+                echo complete
             }
         }
         stage('Integration Tests on Staging'){
             steps{
-                
+                echo complete
             }
         }
-	  stage('Deplot to Production'){
+	stage('Deplot to Production'){
             steps{
-                
+                echo complete
             }
         }
     }
