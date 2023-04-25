@@ -19,16 +19,16 @@ pipeline{
     	        success{
                     emailext attachlog: true,
                     attachmentsPattern: '*',
-        		    mail to: "caitlinparker98@gmail.com",
-        	        subject: "Unit and Integration Tests Status",
-        		    body: "Tests completed successfully."
+        		    mail to: 'caitlinparker98@gmail.com',
+        	        subject: 'Unit and Integration Tests Status',
+        		    body: 'Tests completed successfully.'
     	        }
                 failure{
                     emailext attachlog: true,
                     attachmentsPattern: '*',
-                    mail to: "caitlinparker98@gmail.com",
-        	        subject: "Unit and Integration Tests Status",
-        		    body: "Unit and integration tests have failed."
+                    mail to: 'caitlinparker98@gmail.com',
+        	        subject: 'Unit and Integration Tests Status',
+        		    body: 'Unit and integration tests have failed.'
                     
                 }
     		}
@@ -46,15 +46,15 @@ pipeline{
     	        success{
                     emailext attachlog: true,
                     attachmentsPattern: '*',
-        		    mail to: "caitlinparker98@gmail.com",
-        	        subject: "Security Scan",
-        		    body: "Security scan completed successfully."
+        		    mail to: 'caitlinparker98@gmail.com',
+        	        subject: 'Security Scan',
+        		    body: 'Security scan completed successfully.'
     	        }
                 failure{emailext attachlog: true,
                     attachmentsPattern: '*',
-                    mail to: "caitlinparker98@gmail.com",
-        	        subject: "Security Scan",
-        		    body: "The security scan has failed."
+                    mail to: 'caitlinparker98@gmail.com',
+        	        subject: 'Security Scan',
+        		    body: 'The security scan has failed.'
                 }
     		}
         }
