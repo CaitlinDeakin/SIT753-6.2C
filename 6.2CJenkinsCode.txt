@@ -3,15 +3,12 @@ pipeline{
     stages{
         stage('Build'){
             steps{
-                echo "During the Build stage applications such as Maven, Grunt or Gradle are used to automate the compiling and packaging of code.\n
-                Maven in particular is based on the concept of a project object model and is used to manage the building, reporting and documentation of a project."
+                echo "During the Build stage applications such as Maven, Grunt or Gradle are used to automate the compiling and packaging of code.\n Maven in particular is based on the concept of a project object model and is used to manage the building, reporting and documentation of a project."
             }
         }
         stage('Unit and Integration Tests'){
             steps{
-                echo "For the Unit and Integration Tests stage an application such as Katalon can be used.\n
-                Katalon is a program that can integrate with Jenkins and be used to run tests in a a multitude of environments. \n
-                Katalon is also very flexiable and can be adjusted for increased or decreased usage."
+                echo "For the Unit and Integration Tests stage an application such as Katalon can be used.\n Katalon is a program that can integrate with Jenkins and be used to run tests in a a multitude of environments.\n Katalon is also very flexiable and can be adjusted for increased or decreased usage."
             }
             post{
     	        success{
@@ -33,15 +30,12 @@ pipeline{
         }
         stage('Code Analysis'){
             steps{
-                echo "The code analysis stage involves making sure that any code is correct and follows best practices. \n
-                A program like SonarQube can be used to make sure that code is written as should be. It also has the ability to check over 30 langauages making it very versatile.\n
-                An application like SonarQube allows for devlopers to pick up on any mistakes before deploying."
+                echo "The code analysis stage involves making sure that any code is correct and follows best practices.\n A program like SonarQube can be used to make sure that code is written as should be. It also has the ability to check over 30 langauages making it very versatile.\n An application like SonarQube allows for devlopers to pick up on any mistakes before deploying."
             }
         }
         stage('Security Scan'){
             steps{
-                echo "SonarQube can also be used for the Security Scan stage.\n
-                As SonarQube looks at best pratices it can then also identify issues in the code that can lead to vulnerabilities and bugs."
+                echo "SonarQube can also be used for the Security Scan stage.\n As SonarQube looks at best pratices it can then also identify issues in the code that can lead to vulnerabilities and bugs."
             }
             post{
     	        success{
@@ -62,22 +56,17 @@ pipeline{
         }
         stage('Deploy to Staging'){
             steps{
-                echo "For deployment services such as AWS (Amazon Web Services) can be used. \n
-                AWS is a cloud provider that allows deployment of all sorts of environments. They have flexible usage to adjust to the increase or decrease demands which can be useful when running mutliple deployments. \n 
-                AWS can integrate with Jenkins pipeline to allow automated deployment to the staging environment.\n
-                This allows for the code to be correctly deployed to environments. The more that this stage is automated the less likely that there will be a mistake in the deployment."
+                echo "For deployment services such as AWS (Amazon Web Services) can be used.\n AWS is a cloud provider that allows deployment of all sorts of environments. They have flexible usage to adjust to the increase or decrease demands which can be useful when running mutliple deployments.\n AWS can integrate with Jenkins pipeline to allow automated deployment to the staging environment.\n This allows for the code to be correctly deployed to environments. The more that this stage is automated the less likely that there will be a mistake in the deployment."
             }
         }
         stage('Integration Tests on Staging'){
             steps{
-                echo "Katalon can also be used in the stage testing environment.\n
-                With it's ability to create tests with different OS, web and mobile platforms it can demonstrate how code will perform for different users with differing technologies."
+                echo "Katalon can also be used in the stage testing environment.\n With it's ability to create tests with different OS, web and mobile platforms it can demonstrate how code will perform for different users with differing technologies."
             }
         }
 	stage('Deploy to Production'){
             steps{
-                echo "The same reasons that AWS is being used at the staging deployment are the same reasons it will be used in the deployment to the production environment. \n
-                If the staging environment is working correctly, that set up can then be used to automate the production deployment."
+                echo "The same reasons that AWS is being used at the staging deployment are the same reasons it will be used in the deployment to the production environment.\n If the staging environment is working correctly, that set up can then be used to automate the production deployment."
             }
         }
     }
